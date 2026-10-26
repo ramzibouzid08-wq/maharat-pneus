@@ -110,12 +110,12 @@ $('orderForm').addEventListener('submit',function(e){
   'التوصيل':$('delivery').value
  };
  const lines=Object.entries(data).map(([k,v])=>`${k}: ${v}`).join('\n');
- const shopNumber=''; // أضف رقم واتساب المتجر بصيغة دولية، مثال: 213XXXXXXXXX
+const shopNumber='213656948372';
  if(!shopNumber){
   $('formMessage').textContent='النموذج جاهز، لكن يجب إضافة رقم واتساب المتجر داخل الكود قبل استقبال الطلبات. لا يُرسل الطلب تلقائيًا حاليًا.';
   return;
  }
- window.open('https://wa.me/'+shopNumber+'?text='+encodeURIComponent('طلب جديد من موقع Maharat Pneus\n'+lines),'_blank');
+window.open('https://wa.me/'+shopNumber+'?text='+encodeURIComponent('طلب جديد من موقع Maharat Pneus\n'+lines),'_blank');
 });
 </script>
 </body>
