@@ -1,268 +1,371 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#111111">
-<title>Maharat Pneus | إطارات السيارات</title>
+<meta charset="UTF-8"
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101b33">
+<title>E-MAHATA | متجر إطارات السيارات</title>
 <style>
-.payment-demo {
-  max-width: 520px;
-  margin: 30px auto;
-  padding: 24px;
-  border: 1px solid #d6b45c;
-  border-radius: 14px;
-  background: #fff;
-  color: #171717;
-}
-
-.payment-demo label {
-  display: block;
-  margin: 14px 0 6px;
-  font-weight: 600;
-}
-
-.payment-demo input,
-.payment-demo select {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fff;
-  color: #171717;
-}
-
-.payment-demo .btn {
-  width: 100%;
-  margin-top: 18px;
-  cursor: pointer;
-}
-
-.payment-demo .note {
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-}
-:root{--yellow:#f5c400;--black:#111;--gray:#f4f4f4}
+:root{--navy:#101b33;--yellow:#ffd12f;--bg:#f4f6fa;--muted:#687386}
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,Tahoma,sans-serif;background:#fff;color:#171717;line-height:1.7}
-header{background:#111;color:#fff;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.logo{font-size:22px;font-weight:900;color:var(--yellow);letter-spacing:.4px}
-header a{color:#111;background:var(--yellow);padding:9px 14px;border-radius:8px;text-decoration:none;font-weight:bold}
-.hero{background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.52)),url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1600&q=85') center/cover;color:#fff;padding:70px 6%;min-height:330px;display:flex;align-items:center}
-.hero-inner{max-width:650px}
-.hero h1{font-size:clamp(30px,6vw,48px);line-height:1.25;margin:0 0 15px}
-.hero h1 span{color:var(--yellow)}
-.hero p{font-size:18px;color:#eee;margin-bottom:25px}
-.btn{display:inline-block;background:var(--yellow);color:#111;padding:12px 22px;border:0;border-radius:8px;text-decoration:none;font-weight:bold;font-size:16px;cursor:pointer}
-section{padding:38px 5%;max-width:1100px;margin:auto}
-.section-title{text-align:center;margin:0 0 8px;font-size:27px}
-.sub{text-align:center;color:#666;margin:0 0 25px}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.feature{background:var(--gray);padding:18px 10px;text-align:center;border-radius:12px;font-weight:bold}
-form{background:#fff;border:1px solid #e4e4e4;border-radius:15px;padding:20px;box-shadow:0 5px 24px #0000000c}
-.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-label{display:block;font-weight:bold;margin-bottom:5px;font-size:14px}
-input,select{width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;background:white;font:inherit;font-size:16px}
-fieldset{border:1px solid #ddd;border-radius:10px;margin:0 0 17px;padding:14px}
-legend{font-weight:bold;padding:0 7px}
-.size-result{background:#fff8d7;border:1px solid #f0d46b;border-radius:8px;padding:10px;text-align:center;margin-top:12px;font-weight:bold}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:#182238;line-height:1.8}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(1100px,92%);margin:auto}
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:10}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0}
+.logo{font-size:25px;font-weight:bold}.logo span{color:var(--yellow)}
+.links{display:flex;gap:18px;font-size:14px}
+.btn{display:inline-block;border:0;border-radius:10px;padding:11px 18px;background:var(--yellow);color:var(--navy);font-weight:bold;cursor:pointer}
+.hero{background:linear-gradient(120deg,#101b33,#233b61);color:white;padding:70px 0}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px}
+h1{font-size:clamp(34px,5vw,56px);line-height:1.3;margin:15px 0}
+h1 span{color:var(--yellow)}
+.hero p{color:#d9e1ef}
+.tire{margin:auto;width:min(260px,65vw);aspect-ratio:1;border:18px solid #161a22;border-radius:50%;background:repeating-conic-gradient(#3c424c 0 8deg,#222831 8deg 15deg);box-shadow:inset 0 0 0 10px #555;display:grid;place-items:center}
+.rim{width:53%;aspect-ratio:1;border-radius:50%;border:12px solid #b9c2d0;background:repeating-conic-gradient(#e9edf2 0 12deg,#7c8798 12deg 22deg)}
+section{padding:55px 0}
+h2{font-size:30px;color:var(--navy);margin:0 0 8px}
+.sub{color:var(--muted);margin-top:0}
+.features,.products,.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature,.card,.step,.faq{background:white;border:1px solid #e3e7ef;border-radius:16px;padding:20px}
+.feature b{display:block;color:var(--navy)}
+.search{background:white;padding:20px;border-radius:16px;margin:25px 0;box-shadow:0 8px 25px #101b330b}
+.filters,.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+label{display:block;font-size:13px;font-weight:bold;margin-bottom:5px}
+input,select,textarea{width:100%;padding:11px;border:1px solid #dce1ea;border-radius:9px;background:white}
+input:focus,select:focus,textarea:focus{outline:2px solid #ffe68a}
+.card{padding:0;overflow:hidden}
+.product-picture{height:150px;background:#e8edf4;display:grid;place-items:center}
+.product-picture .tire{width:115px;border-width:9px}
+.product-info{padding:17px}
+.product-info h3{margin:0;color:var(--navy)}
+.tag{display:inline-block;background:#fff3b5;border-radius:6px;padding:3px 8px;font-size:12px}
+.product-info p{font-size:13px;color:var(--muted)}
+.price{font-weight:bold;color:#947000}
+.booking{background:var(--navy);color:white;border-radius:22px;padding:28px;display:grid;grid-template-columns:.8fr 1.2fr;gap:25px}
+.booking h2{color:white}.booking h2 span{color:var(--yellow)}
+.formbox{background:white;color:#172033;border-radius:15px;padding:20px}
+.form-grid{grid-template-columns:1fr 1fr}
 .full{grid-column:1/-1}
-.note{font-size:13px;color:#666}
-  
-<section id="demo-payment" class="payment-demo">
-  <h2 class="section-title">معاينة واجهة الدفع</h2>
-  <p class="note">
-</p>
-
-  <form id="demoPaymentForm">
-    <label for="demoCard">رقم تجريبي</label>
-    <input
-      id="demoCard"
-      type="text"
-      inputmode="numeric"
-      maxlength="19"
-      placeholder="6280 7030 1234 5678"
-      autocomplete="off"
-      required
-    >
-
-    <label for="expiryMonth">شهر الانتهاء التجريبي</label>
-    <select id="expiryMonth" required>
-      <option value="">اختر الشهر</option>
-      <option value="01">01</option>
-      <option value="02">02</option>
-      <option value="03">03</option>
-      <option value="04">04</option>
-      <option value="05">05</option>
-      <option value="06">06</option>
-      <option value="07">07</option>
-      <option value="08">08</option>
-      <option value="09">09</option>
-      <option value="10">10</option>
-      <option value="11">11</option>
-      <option value="12">12</option>
-    </select>
-    <label for="expiryYear">سنة الانتهاء التجريبية</label>
-    <select id="expiryYear" required>
-      <option value="">اختر السنة</option>
-    </select>
-    <button class="btn" type="submit">
-      اختبار الواجهة
-    </button>
-    <p id="demoPaymentMessage" class="note" role="status"></p>
-  </form>
-</section>
-footer{background:#111;color:#ddd;text-align:center;padding:24px 12px;margin-top:25px}
-@media(max-width:620px){header{padding:12px 4%}.logo{font-size:18px}.hero{padding:48px 5%;min-height:300px}.features{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}section{padding:30px 4%}form{padding:15px}}
+.formbox button{width:100%;margin-top:14px}
+.small{font-size:12px;color:var(--muted)}
+.faqs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+details{background:white;border:1px solid #e3e7ef;border-radius:12px;padding:16px}
+summary{font-weight:bold;cursor:pointer}
+footer{background:#091225;color:#d2d9e6;padding:30px 0;text-align:center}
+footer strong{color:var(--yellow)}
+.whatsapp{position:fixed;left:15px;bottom:15px;background:#20bd66;color:white;padding:12px 17px;border-radius:40px;font-weight:bold;z-index:15}
+.demo-card{background:linear-gradient(135deg,#fff,#f9f3d7);border:1px solid #e8d68b;border-radius:18px;padding:24px;max-width:650px;margin:auto}
+.demo-card h2{margin-bottom:8px}
+.demo-card .btn{width:100%;margin-top:14px}
+.demo-notice{background:#fff8d9;border-right:4px solid #d2a900;border-radius:8px;padding:12px;font-size:13px;color:#544718}
+.demo-message{font-weight:bold;min-height:30px}
+@media(max-width:750px){
+ .links{display:none}.hero-grid,.booking{grid-template-columns:1fr}
+ .features,.products,.steps{grid-template-columns:1fr}
+ .hero{padding:45px 0}.hero-grid{gap:30px}
+ .filters{grid-template-columns:1fr 1fr}
+ .faqs{grid-template-columns:1fr}
+}
+@media(max-width:450px){.form-grid,.filters{grid-template-columns:1fr}.full{grid-column:auto}h2{font-size:25px}}
 </style>
 </head>
 <body>
 <header>
-  <div class="logo">MAHARAT PNEUS</div>
-  <a href="#order">اطلب الآن</a>
+ <div class="container">
+  <nav>
+   <a class="logo" href="#home">E-<span>MAHATA</span></a>
+   <div class="links">
+    <a href="#home">الرئيسية</a>
+    <a href="#products">الإطارات</a>
+    <a href="#how">طريقة الحجز</a>
+    <a href="#gold-card">البطاقة الذهبية</a>
+    <a href="#faq">الأسئلة الشائعة</a>
+   </div>
+   <a class="btn" href="#booking">احجز الآن</a>
+  </nav>
+ </div>
 </header>
+
 <main>
-  <div class="hero">
-    <div class="hero-inner">
-      <h1>عجلات عالية الجودة<br><span>بأفضل الأسعار</span></h1>
-      <p>في متناولكم — اختر مقاس الإطار المناسب لسيارتك وأرسل طلبك بسهولة.</p>
-      <a class="btn" href="#order">اطلب الآن</a>
-    </div>
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div>
+   <span style="color:#ffd12f">● منصتك لحجز إطارات السيارات</span>
+   <h1>إطار سيارتك المناسب<br><span>بخطوات بسيطة.</span></h1>
+   <p>ابحث عن مقاس الإطار الذي تحتاجه، اختر العلامة التجارية، وأرسل طلب الحجز بسهولة. سنتواصل معك لتأكيد السعر والتوفر.</p>
+   <a class="btn" href="#products">اكتشف الإطارات ←</a>
+   <p class="small">السعر والتوفر النهائيان يحتاجان إلى تأكيد قبل الشراء.</p>
   </div>
-  <section>
-    <div class="features">
-      <div class="feature">✓ خيارات متعددة للمقاسات</div>
-      <div class="feature">✓ طلب سهل وسريع</div>
-      <div class="feature">✓ توصيل حسب الاتفاق</div>
-    </div>
-  </section>
-  <section id="order">
-    <h2 class="section-title">اختر مقاس الإطار</h2>
-    <p class="sub">حدّد المواصفات المطبوعة على جانب إطارك الحالي.</p>
-    <form id="orderForm">
-      <fieldset>
-        <legend>مقاس الإطار</legend>
-        <div class="form-grid">
-          <div><label for="brand">الماركة *</label><select id="brand" required><option value="">اختر الماركة</option><option>Continental</option><option>IRIS</option></select></div>
-          <div><label for="width">العرض (مم) *</label><select id="width" required><option value="">اختر العرض</option><option>155</option><option>165</option><option>175</option><option>185</option><option>195</option><option>205</option><option>215</option><option>225</option><option>235</option><option>245</option><option>255</option><option>265</option><option>275</option></select></div>
-          <div><label for="ratio">النسبة (%) *</label><select id="ratio" required><option value="">اختر النسبة</option><option>40</option><option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option></select></div>
-          <div><label for="rim">قطر الحافة (بوصة) *</label><select id="rim" required><option value="">اختر القطر</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option></select></div>
-        </div>
-        <div class="size-result" id="sizeResult">المقاس المحدد: —/— R—</div>
-      </fieldset>
-      <fieldset>
-        <legend>معلومات الزبون والسيارة</legend>
-        <div class="form-grid">
-          <div><label for="name">الاسم واللقب *</label><input id="name" required autocomplete="name" placeholder="اكتب اسمك الكامل"></div>
-          <div><label for="phone">رقم الهاتف *</label><input id="phone" required inputmode="tel" autocomplete="tel" placeholder="05 / 06 / 07" pattern="[0-9 +()-]{9,18}"></div>
-          <div><label for="phone2">رقم الهاتف الثاني</label><input id="phone2" inputmode="tel" placeholder="اختياري"></div>
-          <div><label for="car">نوع السيارة *</label><input id="car" required placeholder="مثال: Renault Clio"></div>
-          <div><label for="tireType">نوع الإطار *</label><select id="tireType" required><option value="">اختر النوع</option><option>إطارات صيفية</option><option>إطارات شتوية</option><option>إطارات عامة</option><option>إطارات رياضية</option><option>إطارات اقتصادية</option><option>آخر</option></select></div>
-          <div><label for="quantity">الكمية المطلوبة *</label><select id="quantity" required><option value="">اختر الكمية</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
-          <div class="full"><label for="wilaya">الولاية *</label><select id="wilaya" required><option value="">اختر الولاية</option>
-          <option>01 - أدرار</option><option>02 - الشلف</option><option>03 - الأغواط</option><option>04 - أم البواقي</option><option>05 - باتنة</option><option>06 - بجاية</option><option>07 - بسكرة</option><option>08 - بشار</option><option>09 - البليدة</option><option>10 - البويرة</option><option>11 - تمنراست</option><option>12 - تبسة</option><option>13 - تلمسان</option><option>14 - تيارت</option><option>15 - تيزي وزو</option><option>16 - الجزائر</option><option>17 - الجلفة</option><option>18 - جيجل</option><option>19 - سطيف</option><option>20 - سعيدة</option><option>21 - سكيكدة</option><option>22 - سيدي بلعباس</option><option>23 - عنابة</option><option>24 - قالمة</option><option>25 - قسنطينة</option><option>26 - المدية</option><option>27 - مستغانم</option><option>28 - المسيلة</option><option>29 - معسكر</option><option>30 - ورقلة</option><option>31 - وهران</option><option>32 - البيض</option><option>33 - إليزي</option><option>34 - برج بوعريريج</option><option>35 - بومرداس</option><option>36 - الطارف</option><option>37 - تندوف</option><option>38 - تيسمسيلت</option><option>39 - الوادي</option><option>40 - خنشلة</option><option>41 - سوق أهراس</option><option>42 - تيبازة</option><option>43 - ميلة</option><option>44 - عين الدفلى</option><option>45 - النعامة</option><option>46 - عين تموشنت</option><option>47 - غليزان</option><option>48 - غرداية</option></select></div>
-          <div class="full"><label for="delivery">طريقة التوصيل *</label><select id="delivery" required><option value="">اختر طريقة التوصيل</option><option>التوصيل إلى المنزل</option><option>التوصيل إلى مكتب شركة التوصيل</option></select></div>
-        </div>
-      </fieldset>
-      <button class="btn" type="submit" style="width:100%">تأكيد الطلب عبر واتساب</button>
-      <p class="note" id="formMessage" role="status"></p>
-    </form>
-  </section>
+  <div class="tire" aria-label="رسم إطار سيارة"><div class="rim"></div></div>
+ </div>
+</section>
+
+<div class="container features">
+ <div class="feature">🔎 <b>بحث حسب المقاس</b><small>اختر عرض الإطار وارتفاعه والجنط.</small></div>
+ <div class="feature">📱 <b>حجز عبر الهاتف</b><small>أرسل طلبك من هاتفك بسهولة.</small></div>
+ <div class="feature">🤝 <b>تأكيد قبل الشراء</b><small>تأكد من السعر والتوفر أولًا.</small></div>
+</div>
+
+<section id="products">
+ <div class="container">
+  <h2>إطارات السيارات</h2>
+  <p class="sub">اختر منتجًا أو ابحث عن مقاسك.</p>
+  <div class="search">
+   <div class="filters">
+    <div><label for="width">عرض الإطار</label><select id="width"><option value="">الكل</option><option>155</option><option>165</option><option>175</option><option>185</option><option>195</option><option>205</option><option>215</option><option>225</option><option>235</option><option>245</option><option>255</option><option>265</option><option>275</option></select></div>
+    <div><label for="ratio">الارتفاع</label><select id="ratio"><option value="">الكل</option><option>40</option><option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option></select></div>
+    <div><label for="rimsize">مقاس الجنط</label><select id="rimsize"><option value="">الكل</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option></select></div>
+   </div>
+   <p><button class="btn" id="search" type="button">بحث</button> <button class="btn" id="reset" type="button" style="background:#e9edf4">إظهار الكل</button></p>
+  </div>
+
+  <div class="products" id="productGrid">
+   <article class="card" data-brand="IRIS" data-w="205" data-r="55" data-rim="16">
+    <div class="product-picture"><div class="tire"><div class="rim"></div></div></div>
+    <div class="product-info"><span class="tag">IRIS</span><h3>IRIS ARESTA 4X4</h3><p>نموذج لإطار سيارات 4×4، حسب المقاس والتوفر.</p><p>المقاس: 205/55 R16</p><div class="price">السعر حسب الطلب</div><button class="btn reserve" type="button">احجز هذا الإطار</button></div>
+   </article>
+   <article class="card" data-brand="IRIS" data-w="195" data-r="65" data-rim="15">
+    <div class="product-picture"><div class="tire"><div class="rim"></div></div></div>
+    <div class="product-info"><span class="tag">IRIS</span><h3>IRIS STORM</h3><p>خيار للاستخدام اليومي. تأكد من المقاس المناسب لسيارتك.</p><p>المقاس: 195/65 R15</p><div class="price">السعر حسب الطلب</div><button class="btn reserve" type="button">احجز هذا الإطار</button></div>
+   </article>
+   <article class="card" data-brand="IRIS" data-w="185" data-r="65" data-rim="15">
+    <div class="product-picture"><div class="tire"><div class="rim"></div></div></div>
+    <div class="product-info"><span class="tag">IRIS</span><h3>IRIS SEFINA</h3><p>نموذج للسيارات الخفيفة حسب المقاس المطلوب.</p><p>المقاس: 185/65 R15</p><div class="price">السعر حسب الطلب</div><button class="btn reserve" type="button">احجز هذا الإطار</button></div>
+   </article>
+   <article class="card" data-brand="Continental" data-w="205" data-r="60" data-rim="16">
+    <div class="product-picture"><div class="tire"><div class="rim"></div></div></div>
+    <div class="product-info"><span class="tag">Continental</span><h3>Continental Eco</h3><p>نموذج توضيحي؛ يجب تأكيد الموديل والتوفر.</p><p>المقاس: 205/60 R16</p><div class="price">السعر حسب الطلب</div><button class="btn reserve" type="button">احجز هذا الإطار</button></div>
+   </article>
+   <article class="card" data-brand="Michelin" data-w="225" data-r="45" data-rim="17">
+    <div class="product-picture"><div class="tire"><div class="rim"></div></div></div>
+    <div class="product-info"><span class="tag">Michelin</span><h3>Michelin Sport</h3><p>تأكد من توفر العلامة والمقاس قبل الطلب.</p><p>المقاس: 225/45 R17</p><div class="price">السعر حسب الطلب</div><button class="btn reserve" type="button">احجز هذا الإطار</button></div>
+   </article>
+   <article class="card" data-brand="IRIS" data-w="175" data-r="70" data-rim="13">
+    <div class="product-picture"><div class="tire"><div class="rim"></div></div></div>
+    <div class="product-info"><span class="tag">IRIS</span><h3>IRIS City</h3><p>نموذج للسيارات الصغيرة حسب القياس الصحيح.</p><p>المقاس: 175/70 R13</p><div class="price">السعر حسب الطلب</div><button class="btn reserve" type="button">احجز هذا الإطار</button></div>
+   </article>
+  </div>
+  <p id="empty" hidden>لا توجد منتجات مطابقة لهذا المقاس.</p>
+ </div>
+</section>
+
+<section id="how" style="background:#eaf0f7">
+ <div class="container">
+  <h2>كيف تتم عملية الحجز؟</h2><p class="sub">ثلاث خطوات سهلة.</p>
+  <div class="steps">
+   <div class="step"><h3>01 — اختر الإطار</h3><p>ابحث حسب مقاس الإطار أو اختر أحد النماذج.</p></div>
+   <div class="step"><h3>02 — املأ الطلب</h3><p>أدخل معلومات التواصل والسيارة والمقاس.</p></div>
+   <div class="step"><h3>03 — أكّد الحجز</h3><p>راجع التفاصيل وأرسلها عبر واتساب لتأكيد السعر والتوفر.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="booking">
+ <div class="container booking">
+  <div>
+   <h2>احجز إطارك <span>الآن</span></h2>
+   <p>املأ النموذج، وسيتم فتح واتساب برسالة جاهزة. لن تُرسل الرسالة إلا بعد ضغطك على إرسال داخل واتساب.</p>
+   <p>✓ لا حاجة لإنشاء حساب</p><p>✓ تأكيد السعر والتوفر قبل الشراء</p><p>✓ لا يوجد دفع إلكتروني داخل هذه الصفحة</p>
+  </div>
+  <form class="formbox" id="bookingForm">
+   <div class="form-grid">
+    <div><label for="name">الاسم الكامل *</label><input id="name" required autocomplete="name"></div>
+    <div><label for="phone">رقم الهاتف *</label><input id="phone" type="tel" required autocomplete="tel" placeholder="05 أو 06 أو 07"></div>
+    <div><label for="wilaya">الولاية *</label><select id="wilaya" required><option value="">اختر الولاية</option></select></div>
+    <div><label for="car">نوع السيارة *</label><input id="car" required placeholder="مثال: Renault Clio"></div>
+    <div><label for="brand">العلامة التجارية</label><select id="brand"><option>لا يهم</option><option>IRIS</option><option>Continental</option><option>Michelin</option><option>أخرى</option></select></div>
+    <div><label for="size">مقاس الإطار *</label><input id="size" required placeholder="205/55 R16"></div>
+    <div><label for="quantity">الكمية</label><select id="quantity"><option>1</option><option>2</option><option selected>4</option><option>5</option></select></div>
+    <div><label for="delivery">الاستلام</label><select id="delivery"><option>أرغب في معرفة الخيارات</option><option>استلام من المحل</option><option>توصيل حسب التوفر</option></select></div>
+    <div class="full"><label for="address">العنوان أو ملاحظات</label><textarea id="address" rows="3"></textarea></div>
+    <div class="full"><button class="btn" type="submit">إرسال طلب الحجز عبر واتساب ↗</button><p class="small">لا تدخل معلومات بطاقة بنكية. هذا الموقع لا يعالج المدفوعات.</p></div>
+   </div>
+  </form>
+ </div>
+</section>
+
+<!-- قسم البطاقة الذهبية: اختبار تجريبي للبادئة فقط -->
+<section id="gold-card">
+ <div class="container">
+  <div class="demo-card">
+   <h2>💳 البطاقة الذهبية</h2>
+   <p class="sub">اختبار شكلي للبادئة، وليس خدمة دفع إلكتروني.</p>
+
+   <div class="demo-notice">
+    <strong>تنبيه:</strong>
+    لا تدخل رقم بطاقتك الحقيقي أو تاريخ انتهائها أو الرقم السري أو رمز OTP.
+    لا يتم تنفيذ أي عملية دفع أو حفظ بيانات مالية في هذا القسم.
+   </div>
+
+   <div style="margin-top:20px">
+    <label for="cardPrefix">بادئة تجريبية من 8 أرقام</label>
+    <input
+     id="cardPrefix"
+     type="text"
+     inputmode="numeric"
+     maxlength="8"
+     pattern="[0-9]{8}"
+     placeholder="62807030 أو 62807031"
+     autocomplete="off"
+     aria-describedby="cardHelp cardMessage"
+    >
+    <p class="small" id="cardHelp">للتجربة فقط: أدخل إحدى البادئتين أعلاه.</p>
+    <button class="btn" id="checkCardPrefix" type="button">اختبار البادئة</button>
+    <p class="demo-message" id="cardMessage" role="status" aria-live="polite"></p>
+    <p class="small">مطابقة البادئة لا تثبت أن البطاقة حقيقية أو صالحة، ولا تعني نجاح الدفع.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="faq">
+ <div class="container">
+  <h2>الأسئلة الشائعة</h2>
+  <div class="faqs">
+   <details><summary>هل الأسعار نهائية؟</summary><p>لا، يجب تأكيد السعر النهائي والتوفر مع المتجر قبل الشراء.</p></details>
+   <details><summary>هل يمكن الدفع من الموقع؟</summary><p>لا. الموقع يرسل طلب الحجز فقط ولا يجمع بيانات البطاقات.</p></details>
+   <details><summary>كيف أعرف المقاس الصحيح؟</summary><p>تحقق من المقاس المكتوب على جانب الإطار أو في دليل السيارة.</p></details>
+   <details><summary>هل الطلب يعني أن الإطار متوفر؟</summary><p>الطلب استفسار أولي، ويتم تأكيد التوفر عند التواصل معك.</p></details>
+  </div>
+ </div>
+</section>
 </main>
-<footer><strong style="color:#f5c400">MAHARAT PNEUS</strong><br>عجلات عالية الجودة بأفضل الأسعار في متناولكم</footer>
+
+<footer>
+ <div class="container">
+  <strong>E-MAHATA</strong>
+  <p>منصة حجز إطارات السيارات في الجزائر.</p>
+  <small>© <span id="year"></span> E-MAHATA — جميع الحقوق محفوظة.</small>
+ </div>
+</footer>
+
+<a class="whatsapp" id="quickWhatsApp" href="#" target="_blank" rel="noopener">واتساب ☎</a>
+
 <script>
-const $=id=>document.getElementById(id);
-function updateSize(){const w=$('width').value||'—',r=$('ratio').value||'—',d=$('rim').value||'—';$('sizeResult').textContent=`المقاس المحدد: ${w}/${r} R${d}`}
-['width','ratio','rim'].forEach(id=>$(id).addEventListener('change',updateSize));
-$('orderForm').addEventListener('submit',function(e){
- e.preventDefault();
- const data={
-  'الاسم واللقب':$('name').value.trim(),
-  'رقم الهاتف':$('phone').value.trim(),
-  'الهاتف الثاني':$('phone2').value.trim()||'غير محدد',
-  'الماركة':$('brand').value,
-  'مقاس الإطار':`${$('width').value}/${$('ratio').value} R${$('rim').value}`,
-  'نوع السيارة':$('car').value.trim(),
-  'نوع الإطار':$('tireType').value,
-  'الولاية':$('wilaya').value,
-  'الكمية':$('quantity').value,
-  'التوصيل':$('delivery').value
- };
- const lines=Object.entries(data).map(([k,v])=>`${k}: ${v}`).join('\n');
-const shopNumber='213656948372';
- if(!shopNumber){
-  $('formMessage').textContent='النموذج جاهز، لكن يجب إضافة رقم واتساب المتجر داخل الكود قبل استقبال الطلبات. لا يُرسل الطلب تلقائيًا حاليًا.';
+/* رقم واتساب المتجر بالصيغة الدولية دون + أو مسافات */
+const WHATSAPP_NUMBER = "213656948372";
+
+const wilayas = [
+"أدرار","الشلف","الأغواط","أم البواقي","باتنة","بجاية","بسكرة","بشار","البليدة","البويرة",
+"تمنراست","تبسة","تلمسان","تيارت","تيزي وزو","الجزائر","الجلفة","جيجل","سطيف","سعيدة",
+"سكيكدة","سيدي بلعباس","عنابة","قالمة","قسنطينة","المدية","مستغانم","المسيلة","معسكر","ورقلة",
+"وهران","البيض","إليزي","برج بوعريريج","بومرداس","الطارف","تندوف","تيسمسيلت","الوادي","خنشلة",
+"سوق أهراس","تيبازة","ميلة","عين الدفلى","النعامة","عين تموشنت","غرداية","غليزان","تيميمون",
+"برج باجي مختار","أولاد جلال","بني عباس","عين صالح","عين قزام","تقرت","جانت","المغير","المنيعة"
+];
+
+const wilayaSelect = document.getElementById("wilaya");
+wilayas.forEach((name,i)=>{
+ const option=document.createElement("option");
+ option.value=name;
+ option.textContent=String(i+1).padStart(2,"0")+" - "+name;
+ wilayaSelect.appendChild(option);
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+const cards=[...document.querySelectorAll(".card")];
+const width=document.getElementById("width");
+const ratio=document.getElementById("ratio");
+const rim=document.getElementById("rimsize");
+
+function filterProducts(){
+ let count=0;
+ cards.forEach(card=>{
+  const visible=(!width.value||card.dataset.w===width.value)&&
+   (!ratio.value||card.dataset.r===ratio.value)&&
+   (!rim.value||card.dataset.rim===rim.value);
+  card.hidden=!visible;
+  if(visible)count++;
+ });
+ document.getElementById("empty").hidden=count>0;
+}
+
+document.getElementById("search").addEventListener("click",filterProducts);
+
+document.getElementById("reset").addEventListener("click",()=>{
+ width.value="";
+ ratio.value="";
+ rim.value="";
+ filterProducts();
+});
+
+[width,ratio,rim].forEach(el=>el.addEventListener("change",filterProducts));
+
+document.querySelectorAll(".reserve").forEach(button=>{
+ button.addEventListener("click",()=>{
+  const card=button.closest(".card");
+  document.getElementById("brand").value=card.dataset.brand;
+  document.getElementById("size").value=
+   `${card.dataset.w}/${card.dataset.r} R${card.dataset.rim}`;
+  document.getElementById("booking").scrollIntoView({behavior:"smooth"});
+ });
+});
+
+document.getElementById("bookingForm").addEventListener("submit",event=>{
+ event.preventDefault();
+
+ const number=WHATSAPP_NUMBER.replace(/\D/g,"");
+ if(!/^\d{8,15}$/.test(number)){
+  alert("يرجى ضبط رقم واتساب المتجر داخل الكود.");
   return;
  }
-window.open('https://wa.me/'+shopNumber+'?text='+encodeURIComponent('طلب جديد من موقع Maharat Pneus\n'+lines),'_blank');
-});
-  
-const demoCard = document.getElementById("demoCard");
-const expiryYear = document.getElementById("expiryYear");
-const demoPaymentForm = document.getElementById("demoPaymentForm");
-const demoPaymentMessage = document.getElementById("demoPaymentMessage");
 
-// إنشاء السنوات المتاحة للاختبار تلقائيًا
-const currentYear = new Date().getFullYear();
+ const fields=[
+  ["الاسم",document.getElementById("name").value],
+  ["الهاتف",document.getElementById("phone").value],
+  ["الولاية",document.getElementById("wilaya").value],
+  ["السيارة",document.getElementById("car").value],
+  ["العلامة",document.getElementById("brand").value],
+  ["المقاس",document.getElementById("size").value],
+  ["الكمية",document.getElementById("quantity").value],
+  ["الاستلام",document.getElementById("delivery").value],
+  ["العنوان/ملاحظات",document.getElementById("address").value||"لا توجد"]
+ ];
 
-for (let year = currentYear; year <= currentYear + 10; year++) {
-  const option = document.createElement("option");
-  option.value = String(year);
-  option.textContent = String(year);
-  expiryYear.appendChild(option);
-}
+ const message="السلام عليكم، أريد الاستفسار عن حجز إطارات من E-MAHATA.\n\n"+
+  fields.map(([label,value])=>label+": "+value).join("\n")+
+  "\n\nيرجى تأكيد التوفر والسعر النهائي. شكرًا.";
 
-// التحقق من تنسيق رقم وهمي فقط، دون حفظه أو إرساله
-function validateDemoCardNumber(value) {
-  const digits = value.replace(/\s/g, "");
-
-  return /^6280703[01]\d{8}$/.test(digits);
-}
-
-// تنسيق الرقم أثناء الكتابة لتسهيل قراءته
-demoCard.addEventListener("input", function () {
-  const digits = this.value.replace(/\D/g, "").slice(0, 16);
-  this.value = digits.replace(/(\d{4})(?=\d)/g, "$1 ");
+ window.open(
+  "https://wa.me/"+number+"?text="+encodeURIComponent(message),
+  "_blank",
+  "noopener"
+ );
 });
 
-// التحقق من تاريخ الانتهاء
-function validateDemoExpiry(month, year) {
-  if (!month || !year) return false;
+/* اختبار البادئة التجريبية فقط؛ لا يجمع بيانات بطاقة كاملة */
+const cardPrefixInput=document.getElementById("cardPrefix");
+const cardMessage=document.getElementById("cardMessage");
 
-  const m = Number(month);
-  const y = Number(year);
-  const now = new Date();
-
-  return (
-    m >= 1 &&
-    m <= 12 &&
-    (y > now.getFullYear() ||
-      (y === now.getFullYear() && m >= now.getMonth() + 1))
-  );
-}
-
-// اختبار الواجهة فقط؛ لا تتم أي عملية دفع
-demoPaymentForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const number = demoCard.value;
-  const month = document.getElementById("expiryMonth").value;
-  const year = expiryYear.value;
-
-  if (!validateDemoCardNumber(number)) {
-    demoPaymentMessage.textContent =
-      "للاختبار، استخدم تنسيقًا وهميًا من 16 رقمًا يبدأ بـ 6280 7030 أو 6280 7031.";
-    return;
-  }
-  if (!validateDemoExpiry(month, year)) {
-    demoPaymentMessage.textContent =
-      "تاريخ الانتهاء التجريبي غير صالح أو منتهٍ.";
-    return;
-  }
-  demoPaymentMessage.textContent =
-    "نجح اختبار الواجهة. لم تُحفظ بيانات ولم تتم أي عملية دفع.";
+cardPrefixInput.addEventListener("input",()=>{
+ cardPrefixInput.value=cardPrefixInput.value.replace(/\D/g,"").slice(0,8);
+ cardMessage.textContent="";
 });
+
+document.getElementById("checkCardPrefix").addEventListener("click",()=>{
+ const prefix=cardPrefixInput.value.trim();
+
+ if(!/^\d{8}$/.test(prefix)){
+  cardMessage.textContent="أدخل 8 أرقام تجريبية بالضبط.";
+  return;
+ }
+
+ if(prefix==="62807030"||prefix==="62807031"){
+  cardMessage.textContent=
+   "تطابقت البادئة مع أحد النمطين التجريبيين، دون التحقق من بطاقة حقيقية أو تنفيذ دفع.";
+ }else{
+  cardMessage.textContent=
+   "البادئة لا تطابق النمطين التجريبيين المحددين.";
+ }
+});
+
+document.getElementById("quickWhatsApp").href=
+ "https://wa.me/"+WHATSAPP_NUMBER.replace(/\D/g,"")+
+ "?text="+encodeURIComponent("السلام عليكم، أريد الاستفسار عن إطارات السيارات المتوفرة لدى E-MAHATA.");
 </script>
 </body>
 </html>
