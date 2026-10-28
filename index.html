@@ -186,36 +186,43 @@ footer strong{color:var(--yellow)}
   </form>
  </div>
 </section>
-
-<!-- قسم البطاقة الذهبية: اختبار تجريبي للبادئة فقط -->
-<section id="gold-card">
- <div class="container">
-  <div class="demo-card">
-   <h2>💳 البطاقة الذهبية</h2>
-   <p class="sub">اختبار شكلي للبادئة، وليس خدمة دفع إلكتروني.</p>
-
-   <div class="demo-notice">
-    <strong>تنبيه:</strong>
-    لا تدخل رقم بطاقتك الحقيقي أو تاريخ انتهائها أو الرقم السري أو رمز OTP.
-    لا يتم تنفيذ أي عملية دفع أو حفظ بيانات مالية في هذا القسم.
-   </div>
-
-   <div style="margin-top:20px">
-    <label for="cardPrefix">بادئة تجريبية من 8 أرقام</label>
-    <input
-     id="cardPrefix"
-     type="text"
-     inputmode="numeric"
-     maxlength="8"
-     pattern="[0-9]{8}"
-     placeholder="62807030 أو 62807031"
-     autocomplete="off"
-     aria-describedby="cardHelp cardMessage"
-    >
-    <p class="small" id="cardHelp">للتجربة فقط: أدخل إحدى البادئتين أعلاه.</p>
-    <button class="btn" id="checkCardPrefix" type="button">اختبار البادئة</button>
-    <p class="demo-message" id="cardMessage" role="status" aria-live="polite"></p>
-    <p class="small">مطابقة البادئة لا تثبت أن البطاقة حقيقية أو صالحة، ولا تعني نجاح الدفع.</p>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدفع الإلكتروني</title>
+<style>
+body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:#f0f2f5;display:flex;justify-content:center;align-items:center;min-height:100vh;color:#1c1e21}
+.c{background:#fff;padding:2rem;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,0.1);width:100%;max-width:400px;text-align:center}
+h1{font-size:1.5rem;margin-bottom:1rem;color:#1a73e8}
+p{font-size:0.9rem;color:#5f6368;margin-bottom:1.5rem}
+.f{margin-bottom:1.2rem;text-align:right}
+label{display:block;font-size:0.85rem;font-weight:600;margin-bottom:5px;color:#3c4043}
+input{width:100%;padding:12px;border:1px solid #dadce0;border-radius:8px;box-sizing:border-box;font-size:1rem;transition:0.2s}
+input:focus{outline:none;border-color:#1a73e8;box-shadow:0 0 0 3px rgba(26,115,232,0.1)}
+.b{width:100%;padding:12px;background:#1a73e8;color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:0.3s;margin-top:1rem}
+.b:hover{background:#1557b0;transform:translateY(-1px)}
+.b:active{transform:translateY(0)}
+.e{color:#d93025;font-size:0.75rem;margin-top:4px;display:none}
+</style>
+</head>
+<body>
+<div class="c">
+    <h1>معلومات الدفع الإلكتروني</h1>
+    <p>أدخل 8 أرقام من البطاقة الذهبية وتاريخ الانتهاء</p>
+    <form id="p">
+        <div class="f">
+            <label>رقم البطاقة (8 أرقام)</label>
+            <input type="text" id="n" maxlength="8" placeholder="00000000" required>
+            <div id="e1" class="e">يجب إدخال 8 أرقام فقط</div>
+        </div>
+        <div class="f">
+            <label>تاريخ الانتهاء</label>
+            <input type="month" id="d" required>
+        </div>
+        <button type="submit" class="b">تأكيد الدفع</button>
+    </form
    </div>
   </div>
  </div>
@@ -335,32 +342,6 @@ document.getElementById("bookingForm").addEventListener("submit",event=>{
   "_blank",
   "noopener"
  );
-});
-
-/* اختبار البادئة التجريبية فقط؛ لا يجمع بيانات بطاقة كاملة */
-const cardPrefixInput=document.getElementById("cardPrefix");
-const cardMessage=document.getElementById("cardMessage");
-
-cardPrefixInput.addEventListener("input",()=>{
- cardPrefixInput.value=cardPrefixInput.value.replace(/\D/g,"").slice(0,8);
- cardMessage.textContent="";
-});
-
-document.getElementById("checkCardPrefix").addEventListener("click",()=>{
- const prefix=cardPrefixInput.value.trim();
-
- if(!/^\d{8}$/.test(prefix)){
-  cardMessage.textContent="أدخل 8 أرقام تجريبية بالضبط.";
-  return;
- }
-
- if(prefix==="62807030"||prefix==="62807031"){
-  cardMessage.textContent=
-   "تطابقت البادئة مع أحد النمطين التجريبيين، دون التحقق من بطاقة حقيقية أو تنفيذ دفع.";
- }else{
-  cardMessage.textContent=
-   "البادئة لا تطابق النمطين التجريبيين المحددين.";
- }
 });
 
 document.getElementById("quickWhatsApp").href=
