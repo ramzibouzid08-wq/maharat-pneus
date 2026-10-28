@@ -1,23 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8"
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101b33">
+<meta name="description" content="E-MAHATA منصة للاستفسار وحجز إطارات السيارات في الجزائر.">
 <title>E-MAHATA | متجر إطارات السيارات</title>
+
 <style>
 :root{--navy:#101b33;--yellow:#ffd12f;--bg:#f4f6fa;--muted:#687386}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
 body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:#182238;line-height:1.8}
 a{text-decoration:none;color:inherit}
 button,input,select,textarea{font:inherit}
 .container{width:min(1100px,92%);margin:auto}
 header{background:var(--navy);color:white;position:sticky;top:0;z-index:10}
 nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0}
-.logo{font-size:25px;font-weight:bold}.logo span{color:var(--yellow)}
+.logo{font-size:25px;font-weight:bold}
+.logo span{color:var(--yellow)}
 .links{display:flex;gap:18px;font-size:14px}
 .btn{display:inline-block;border:0;border-radius:10px;padding:11px 18px;background:var(--yellow);color:var(--navy);font-weight:bold;cursor:pointer}
+.btn:hover{filter:brightness(.96)}
 .hero{background:linear-gradient(120deg,#101b33,#233b61);color:white;padding:70px 0}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px}
 h1{font-size:clamp(34px,5vw,56px);line-height:1.3;margin:15px 0}
@@ -29,7 +34,8 @@ section{padding:55px 0}
 h2{font-size:30px;color:var(--navy);margin:0 0 8px}
 .sub{color:var(--muted);margin-top:0}
 .features,.products,.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.feature,.card,.step,.faq{background:white;border:1px solid #e3e7ef;border-radius:16px;padding:20px}
+.features{margin:25px auto}
+.feature,.card,.step{background:white;border:1px solid #e3e7ef;border-radius:16px;padding:20px}
 .feature b{display:block;color:var(--navy)}
 .search{background:white;padding:20px;border-radius:16px;margin:25px 0;box-shadow:0 8px 25px #101b330b}
 .filters,.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -45,7 +51,8 @@ input:focus,select:focus,textarea:focus{outline:2px solid #ffe68a}
 .product-info p{font-size:13px;color:var(--muted)}
 .price{font-weight:bold;color:#947000}
 .booking{background:var(--navy);color:white;border-radius:22px;padding:28px;display:grid;grid-template-columns:.8fr 1.2fr;gap:25px}
-.booking h2{color:white}.booking h2 span{color:var(--yellow)}
+.booking h2{color:white}
+.booking h2 span{color:var(--yellow)}
 .formbox{background:white;color:#172033;border-radius:15px;padding:20px}
 .form-grid{grid-template-columns:1fr 1fr}
 .full{grid-column:1/-1}
@@ -54,24 +61,29 @@ input:focus,select:focus,textarea:focus{outline:2px solid #ffe68a}
 .faqs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 details{background:white;border:1px solid #e3e7ef;border-radius:12px;padding:16px}
 summary{font-weight:bold;cursor:pointer}
+.payment-info{background:white;border:1px solid #e3e7ef;border-radius:16px;padding:24px}
+.notice{background:#fff8d9;border-right:4px solid #d2a900;border-radius:8px;padding:14px;color:#544718}
 footer{background:#091225;color:#d2d9e6;padding:30px 0;text-align:center}
 footer strong{color:var(--yellow)}
 .whatsapp{position:fixed;left:15px;bottom:15px;background:#20bd66;color:white;padding:12px 17px;border-radius:40px;font-weight:bold;z-index:15}
-.demo-card{background:linear-gradient(135deg,#fff,#f9f3d7);border:1px solid #e8d68b;border-radius:18px;padding:24px;max-width:650px;margin:auto}
-.demo-card h2{margin-bottom:8px}
-.demo-card .btn{width:100%;margin-top:14px}
-.demo-notice{background:#fff8d9;border-right:4px solid #d2a900;border-radius:8px;padding:12px;font-size:13px;color:#544718}
-.demo-message{font-weight:bold;min-height:30px}
+[hidden]{display:none!important}
 @media(max-width:750px){
- .links{display:none}.hero-grid,.booking{grid-template-columns:1fr}
+ .links{display:none}
+ .hero-grid,.booking{grid-template-columns:1fr}
  .features,.products,.steps{grid-template-columns:1fr}
- .hero{padding:45px 0}.hero-grid{gap:30px}
+ .hero{padding:45px 0}
+ .hero-grid{gap:30px}
  .filters{grid-template-columns:1fr 1fr}
  .faqs{grid-template-columns:1fr}
 }
-@media(max-width:450px){.form-grid,.filters{grid-template-columns:1fr}.full{grid-column:auto}h2{font-size:25px}}
+@media(max-width:450px){
+ .form-grid,.filters{grid-template-columns:1fr}
+ .full{grid-column:auto}
+ h2{font-size:25px}
+}
 </style>
 </head>
+
 <body>
 <header>
  <div class="container">
@@ -95,11 +107,13 @@ footer strong{color:var(--yellow)}
   <div>
    <span style="color:#ffd12f">● منصتك لحجز إطارات السيارات</span>
    <h1>إطار سيارتك المناسب<br><span>بخطوات بسيطة.</span></h1>
-   <p>ابحث عن مقاس الإطار الذي تحتاجه، اختر العلامة التجارية، وأرسل طلب الحجز بسهولة. سنتواصل معك لتأكيد السعر والتوفر.</p>
+   <p>ابحث عن مقاس الإطار الذي تحتاجه، واختر العلامة التجارية، وأرسل طلب الحجز بسهولة. سنتواصل معك لتأكيد السعر والتوفر.</p>
    <a class="btn" href="#products">اكتشف الإطارات ←</a>
    <p class="small">السعر والتوفر النهائيان يحتاجان إلى تأكيد قبل الشراء.</p>
   </div>
-  <div class="tire" aria-label="رسم إطار سيارة"><div class="rim"></div></div>
+  <div class="tire" role="img" aria-label="رسم توضيحي لإطار سيارة">
+   <div class="rim"></div>
+  </div>
  </div>
 </section>
 
@@ -113,13 +127,39 @@ footer strong{color:var(--yellow)}
  <div class="container">
   <h2>إطارات السيارات</h2>
   <p class="sub">اختر منتجًا أو ابحث عن مقاسك.</p>
+
   <div class="search">
    <div class="filters">
-    <div><label for="width">عرض الإطار</label><select id="width"><option value="">الكل</option><option>155</option><option>165</option><option>175</option><option>185</option><option>195</option><option>205</option><option>215</option><option>225</option><option>235</option><option>245</option><option>255</option><option>265</option><option>275</option></select></div>
-    <div><label for="ratio">الارتفاع</label><select id="ratio"><option value="">الكل</option><option>40</option><option>45</option><option>50</option><option>55</option><option>60</option><option>65</option><option>70</option><option>75</option><option>80</option></select></div>
-    <div><label for="rimsize">مقاس الجنط</label><select id="rimsize"><option value="">الكل</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option></select></div>
+    <div><label for="width">عرض الإطار</label>
+     <select id="width">
+      <option value="">الكل</option>
+      <option>155</option><option>165</option><option>175</option>
+      <option>185</option><option>195</option><option>205</option>
+      <option>215</option><option>225</option><option>235</option>
+      <option>245</option><option>255</option><option>265</option><option>275</option>
+     </select>
+    </div>
+    <div><label for="ratio">الارتفاع</label>
+     <select id="ratio">
+      <option value="">الكل</option>
+      <option>40</option><option>45</option><option>50</option>
+      <option>55</option><option>60</option><option>65</option>
+      <option>70</option><option>75</option><option>80</option>
+     </select>
+    </div>
+    <div><label for="rimsize">مقاس الجنط</label>
+     <select id="rimsize">
+      <option value="">الكل</option>
+      <option>13</option><option>14</option><option>15</option>
+      <option>16</option><option>17</option><option>18</option>
+      <option>19</option><option>20</option>
+     </select>
+    </div>
    </div>
-   <p><button class="btn" id="search" type="button">بحث</button> <button class="btn" id="reset" type="button" style="background:#e9edf4">إظهار الكل</button></p>
+   <p>
+    <button class="btn" id="search" type="button">بحث</button>
+    <button class="btn" id="reset" type="button" style="background:#e9edf4">إظهار الكل</button>
+   </p>
   </div>
 
   <div class="products" id="productGrid">
@@ -127,22 +167,27 @@ footer strong{color:var(--yellow)}
     <div class="product-picture"><div class="tire"><div class="rim"></div></div></div>
     <div class="product-info"><span class="tag">IRIS</span><h3>IRIS ARESTA 4X4</h3><p>نموذج لإطار سيارات 4×4، حسب المقاس والتوفر.</p><p>المقاس: 205/55 R16</p><div class="price">السعر حسب الطلب</div><button class="btn reserve" type="button">احجز هذا الإطار</button></div>
    </article>
+
    <article class="card" data-brand="IRIS" data-w="195" data-r="65" data-rim="15">
     <div class="product-picture"><div class="tire"><div class="rim"></div></div></div>
     <div class="product-info"><span class="tag">IRIS</span><h3>IRIS STORM</h3><p>خيار للاستخدام اليومي. تأكد من المقاس المناسب لسيارتك.</p><p>المقاس: 195/65 R15</p><div class="price">السعر حسب الطلب</div><button class="btn reserve" type="button">احجز هذا الإطار</button></div>
    </article>
+
    <article class="card" data-brand="IRIS" data-w="185" data-r="65" data-rim="15">
     <div class="product-picture"><div class="tire"><div class="rim"></div></div></div>
     <div class="product-info"><span class="tag">IRIS</span><h3>IRIS SEFINA</h3><p>نموذج للسيارات الخفيفة حسب المقاس المطلوب.</p><p>المقاس: 185/65 R15</p><div class="price">السعر حسب الطلب</div><button class="btn reserve" type="button">احجز هذا الإطار</button></div>
    </article>
+
    <article class="card" data-brand="Continental" data-w="205" data-r="60" data-rim="16">
     <div class="product-picture"><div class="tire"><div class="rim"></div></div></div>
     <div class="product-info"><span class="tag">Continental</span><h3>Continental Eco</h3><p>نموذج توضيحي؛ يجب تأكيد الموديل والتوفر.</p><p>المقاس: 205/60 R16</p><div class="price">السعر حسب الطلب</div><button class="btn reserve" type="button">احجز هذا الإطار</button></div>
    </article>
+
    <article class="card" data-brand="Michelin" data-w="225" data-r="45" data-rim="17">
     <div class="product-picture"><div class="tire"><div class="rim"></div></div></div>
     <div class="product-info"><span class="tag">Michelin</span><h3>Michelin Sport</h3><p>تأكد من توفر العلامة والمقاس قبل الطلب.</p><p>المقاس: 225/45 R17</p><div class="price">السعر حسب الطلب</div><button class="btn reserve" type="button">احجز هذا الإطار</button></div>
    </article>
+
    <article class="card" data-brand="IRIS" data-w="175" data-r="70" data-rim="13">
     <div class="product-picture"><div class="tire"><div class="rim"></div></div></div>
     <div class="product-info"><span class="tag">IRIS</span><h3>IRIS City</h3><p>نموذج للسيارات الصغيرة حسب القياس الصحيح.</p><p>المقاس: 175/70 R13</p><div class="price">السعر حسب الطلب</div><button class="btn reserve" type="button">احجز هذا الإطار</button></div>
@@ -154,7 +199,8 @@ footer strong{color:var(--yellow)}
 
 <section id="how" style="background:#eaf0f7">
  <div class="container">
-  <h2>كيف تتم عملية الحجز؟</h2><p class="sub">ثلاث خطوات سهلة.</p>
+  <h2>كيف تتم عملية الحجز؟</h2>
+  <p class="sub">ثلاث خطوات سهلة.</p>
   <div class="steps">
    <div class="step"><h3>01 — اختر الإطار</h3><p>ابحث حسب مقاس الإطار أو اختر أحد النماذج.</p></div>
    <div class="step"><h3>02 — املأ الطلب</h3><p>أدخل معلومات التواصل والسيارة والمقاس.</p></div>
@@ -168,8 +214,11 @@ footer strong{color:var(--yellow)}
   <div>
    <h2>احجز إطارك <span>الآن</span></h2>
    <p>املأ النموذج، وسيتم فتح واتساب برسالة جاهزة. لن تُرسل الرسالة إلا بعد ضغطك على إرسال داخل واتساب.</p>
-   <p>✓ لا حاجة لإنشاء حساب</p><p>✓ تأكيد السعر والتوفر قبل الشراء</p><p>✓ لا يوجد دفع إلكتروني داخل هذه الصفحة</p>
+   <p>✓ لا حاجة لإنشاء حساب</p>
+   <p>✓ تأكيد السعر والتوفر قبل الشراء</p>
+   <p>✓ لا يوجد دفع إلكتروني داخل هذه الصفحة</p>
   </div>
+
   <form class="formbox" id="bookingForm">
    <div class="form-grid">
     <div><label for="name">الاسم الكامل *</label><input id="name" required autocomplete="name"></div>
@@ -186,44 +235,15 @@ footer strong{color:var(--yellow)}
   </form>
  </div>
 </section>
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الدفع الإلكتروني</title>
-<style>
-body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:#f0f2f5;display:flex;justify-content:center;align-items:center;min-height:100vh;color:#1c1e21}
-.c{background:#fff;padding:2rem;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,0.1);width:100%;max-width:400px;text-align:center}
-h1{font-size:1.5rem;margin-bottom:1rem;color:#1a73e8}
-p{font-size:0.9rem;color:#5f6368;margin-bottom:1.5rem}
-.f{margin-bottom:1.2rem;text-align:right}
-label{display:block;font-size:0.85rem;font-weight:600;margin-bottom:5px;color:#3c4043}
-input{width:100%;padding:12px;border:1px solid #dadce0;border-radius:8px;box-sizing:border-box;font-size:1rem;transition:0.2s}
-input:focus{outline:none;border-color:#1a73e8;box-shadow:0 0 0 3px rgba(26,115,232,0.1)}
-.b{width:100%;padding:12px;background:#1a73e8;color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:0.3s;margin-top:1rem}
-.b:hover{background:#1557b0;transform:translateY(-1px)}
-.b:active{transform:translateY(0)}
-.e{color:#d93025;font-size:0.75rem;margin-top:4px;display:none}
-</style>
-</head>
-<body>
-<div class="c">
-    <h1>معلومات الدفع الإلكتروني</h1>
-    <p>أدخل 8 أرقام من البطاقة الذهبية وتاريخ الانتهاء</p>
-    <form id="p">
-        <div class="f">
-            <label>رقم البطاقة (8 أرقام)</label>
-            <input type="text" id="n" maxlength="8" placeholder="00000000" required>
-            <div id="e1" class="e">يجب إدخال 8 أرقام فقط</div>
-        </div>
-        <div class="f">
-            <label>تاريخ الانتهاء</label>
-            <input type="month" id="d" required>
-        </div>
-        <button type="submit" class="b">تأكيد الدفع</button>
-    </form
-   </div>
+
+<section id="gold-card">
+ <div class="container">
+  <h2>الدفع بالبطاقة الذهبية</h2>
+  <p class="sub">معلومات الدفع الإلكتروني</p>
+  <div class="payment-info">
+   <p>يمكن الاستفسار عن خيارات الدفع المتاحة عند التواصل مع المتجر.</p>
+   <div class="notice">الدفع الإلكتروني بالبطاقة الذهبية غير مفعّل حاليًا على الموقع. لا تدخل رقم البطاقة أو تاريخ انتهائها هنا. يجب تفعيل بوابة دفع رسمية ومعتمدة قبل استقبال المدفوعات إلكترونيًا.</div>
+   <p><a class="btn" href="#booking">متابعة حجز الإطارات</a></p>
   </div>
  </div>
 </section>
@@ -249,10 +269,12 @@ input:focus{outline:none;border-color:#1a73e8;box-shadow:0 0 0 3px rgba(26,115,2
  </div>
 </footer>
 
-<a class="whatsapp" id="quickWhatsApp" href="#" target="_blank" rel="noopener">واتساب ☎</a>
+<a class="whatsapp" id="quickWhatsApp" href="#" target="_blank" rel="noopener noreferrer">واتساب ☎</a>
 
 <script>
-/* رقم واتساب المتجر بالصيغة الدولية دون + أو مسافات */
+"use strict";
+
+/* رقم واتساب المتجر: الصيغة الدولية دون + أو مسافات */
 const WHATSAPP_NUMBER = "213656948372";
 
 const wilayas = [
@@ -265,88 +287,103 @@ const wilayas = [
 ];
 
 const wilayaSelect = document.getElementById("wilaya");
-wilayas.forEach((name,i)=>{
- const option=document.createElement("option");
- option.value=name;
- option.textContent=String(i+1).padStart(2,"0")+" - "+name;
+
+wilayas.forEach((name, index) => {
+ const option = document.createElement("option");
+ option.value = name;
+ option.textContent = String(index + 1).padStart(2, "0") + " - " + name;
  wilayaSelect.appendChild(option);
 });
 
-document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
-const cards=[...document.querySelectorAll(".card")];
-const width=document.getElementById("width");
-const ratio=document.getElementById("ratio");
-const rim=document.getElementById("rimsize");
+const cards = [...document.querySelectorAll("#productGrid .card")];
+const width = document.getElementById("width");
+const ratio = document.getElementById("ratio");
+const rim = document.getElementById("rimsize");
 
-function filterProducts(){
- let count=0;
- cards.forEach(card=>{
-  const visible=(!width.value||card.dataset.w===width.value)&&
-   (!ratio.value||card.dataset.r===ratio.value)&&
-   (!rim.value||card.dataset.rim===rim.value);
-  card.hidden=!visible;
-  if(visible)count++;
+function filterProducts() {
+ let count = 0;
+
+ cards.forEach(card => {
+  const visible =
+   (!width.value || card.dataset.w === width.value) &&
+   (!ratio.value || card.dataset.r === ratio.value) &&
+   (!rim.value || card.dataset.rim === rim.value);
+
+  card.hidden = !visible;
+  if (visible) count++;
  });
- document.getElementById("empty").hidden=count>0;
+
+ document.getElementById("empty").hidden = count > 0;
 }
 
-document.getElementById("search").addEventListener("click",filterProducts);
+document.getElementById("search").addEventListener("click", filterProducts);
 
-document.getElementById("reset").addEventListener("click",()=>{
- width.value="";
- ratio.value="";
- rim.value="";
+document.getElementById("reset").addEventListener("click", () => {
+ width.value = "";
+ ratio.value = "";
+ rim.value = "";
  filterProducts();
 });
 
-[width,ratio,rim].forEach(el=>el.addEventListener("change",filterProducts));
+[width, ratio, rim].forEach(element => {
+ element.addEventListener("change", filterProducts);
+});
 
-document.querySelectorAll(".reserve").forEach(button=>{
- button.addEventListener("click",()=>{
-  const card=button.closest(".card");
-  document.getElementById("brand").value=card.dataset.brand;
-  document.getElementById("size").value=
+document.querySelectorAll(".reserve").forEach(button => {
+ button.addEventListener("click", () => {
+  const card = button.closest(".card");
+  document.getElementById("brand").value = card.dataset.brand;
+  document.getElementById("size").value =
    `${card.dataset.w}/${card.dataset.r} R${card.dataset.rim}`;
+
   document.getElementById("booking").scrollIntoView({behavior:"smooth"});
  });
 });
 
-document.getElementById("bookingForm").addEventListener("submit",event=>{
- event.preventDefault();
+function getWhatsAppUrl(message) {
+ const number = WHATSAPP_NUMBER.replace(/\D/g, "");
 
- const number=WHATSAPP_NUMBER.replace(/\D/g,"");
- if(!/^\d{8,15}$/.test(number)){
-  alert("يرجى ضبط رقم واتساب المتجر داخل الكود.");
-  return;
+ if (!/^\d{8,15}$/.test(number)) {
+  alert("يرجى التحقق من رقم واتساب المتجر داخل الكود.");
+  return null;
  }
 
- const fields=[
-  ["الاسم",document.getElementById("name").value],
-  ["الهاتف",document.getElementById("phone").value],
-  ["الولاية",document.getElementById("wilaya").value],
-  ["السيارة",document.getElementById("car").value],
-  ["العلامة",document.getElementById("brand").value],
-  ["المقاس",document.getElementById("size").value],
-  ["الكمية",document.getElementById("quantity").value],
-  ["الاستلام",document.getElementById("delivery").value],
-  ["العنوان/ملاحظات",document.getElementById("address").value||"لا توجد"]
+ return "https://wa.me/" + number + "?text=" + encodeURIComponent(message);
+}
+
+document.getElementById("bookingForm").addEventListener("submit", event => {
+ event.preventDefault();
+
+ const fields = [
+  ["الاسم", document.getElementById("name").value.trim()],
+  ["الهاتف", document.getElementById("phone").value.trim()],
+  ["الولاية", document.getElementById("wilaya").value],
+  ["السيارة", document.getElementById("car").value.trim()],
+  ["العلامة", document.getElementById("brand").value],
+  ["المقاس", document.getElementById("size").value.trim()],
+  ["الكمية", document.getElementById("quantity").value],
+  ["الاستلام", document.getElementById("delivery").value],
+  ["العنوان/ملاحظات", document.getElementById("address").value.trim() || "لا توجد"]
  ];
 
- const message="السلام عليكم، أريد الاستفسار عن حجز إطارات من E-MAHATA.\n\n"+
-  fields.map(([label,value])=>label+": "+value).join("\n")+
+ const message =
+  "السلام عليكم، أريد الاستفسار عن حجز إطارات من E-MAHATA.\n\n" +
+  fields.map(([label, value]) => label + ": " + value).join("\n") +
   "\n\nيرجى تأكيد التوفر والسعر النهائي. شكرًا.";
 
- window.open(
-  "https://wa.me/"+number+"?text="+encodeURIComponent(message),
-  "_blank",
-  "noopener"
- );
+ const url = getWhatsAppUrl(message);
+ if (url) window.open(url, "_blank", "noopener,noreferrer");
 });
 
-document.getElementById("quickWhatsApp").href=
- "https://wa.me/"+WHATSAPP_NUMBER.replace(/\D/g,"")+
- "?text="+encodeURIComponent("السلام عليكم، أريد الاستفسار عن إطارات السيارات المتوفرة لدى E-MAHATA.");
+const quickUrl = getWhatsAppUrl(
+ "السلام عليكم، أريد الاستفسار عن إطارات السيارات المتوفرة لدى E-MAHATA."
+);
+
+if (quickUrl) {
+ document.getElementById("quickWhatsApp").href = quickUrl;
+}
 </script>
 </body>
 </html>
